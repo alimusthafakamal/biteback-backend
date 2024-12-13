@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Validation | ICARE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/account/foto-profil/Icon ICARE.ico" type="image/x-icon">
+    <style>
+        * {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .container {
+            min-height: 92vh;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class="container py-5">
+        {{#if data }}
+        <h1 class="text-center fw-bold mb-4">Verifikasi Akun Berhasil</h1>
+        <i class="fas fa-check-circle fa-3x text-warning d-block text-center mb-4"></i>
+        <p>
+            Akun anda dengan email <b>{{data.email}}</b> telah berhasil diaktivasi. Silahkan buka kembali aplikasi Anda
+            untuk memulai login. Apabila Anda masih di menu verifikasi, maka Anda perlu menekan tombol kembali untuk
+            melakukan
+            login dengan akun Anda. Terima kasih telah mempercayai aplikasi ICARE
+        </p>
+        {{ else if error }}
+        <h1 class="text-center fw-bold mb-4">Verifikasi Akun Gagal</h1>
+        <i class="fas fa-times-circle fa-3x text-warning d-block text-center mb-4"></i>
+        <p>
+            Kami tidak menemukan akun yang Anda maksud. Silahkan buka kembali aplikasi Anda
+            untuk memulai request ulang pengiriman link aktivasi akun. Apabila Anda masih di menu verifikasi, maka Anda
+            cukup menekan tombol "Kirim ulang". Terima kasih telah mempercayai aplikasi ICARE.
+        </p>
+        {{/if}}
+    </div>
+    {{!-- <p class="bg-primary text-white m-0 px-4 py-3" style="font-weight: 500;">Copyright &copy; 2023 PT. Parlemen
+        Atra
+        Nugraha. All Rights Reserved.</p> --}}
+</body>
+
+</html>

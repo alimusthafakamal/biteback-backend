@@ -1,0 +1,1 @@
+export * from './find-all-transaction-proof.interface';
